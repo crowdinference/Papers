@@ -1,0 +1,78 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{graphicx}
+\usepackage{algorithm} % for algorithms
+\usepackage{algpseudocode}
+\usepackage{booktabs} % For formal tables
+\usepackage{amsthm} % For claims
+% \usepackage{subfig}
+
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\theoremstyle{remark}
+
+\settopmatter{printacmref=false, printccs=true, printfolios=true}
+\pagestyle{empty} % removes running headers
+
+\newcommand{\PicScale}{0.5}
+\begin{document}
+
+% \copyrightyear{2018} 
+% \acmYear{2018} 
+% \setcopyright{acmcopyright}
+% \acmConference[BeyondMR'18]{Algorithms and Systems for MapReduce and Beyond }{June 15, 2018}{Houston, TX, USA}
+% \acmBooktitle{BeyondMR'18: Algorithms and Systems for MapReduce and Beyond , June 15, 2018, Houston, TX, USA}
+% \acmPrice{15.00}
+% \acmDOI{10.1145/3206333.3209273}
+% \acmISBN{978-1-4503-5703-6/18/06}
+
+\title {Truth inference in crowdsourcing via both learning and labels aggregation}
+
+% \author{Igor Kuralenok}
+% \affiliation{%
+%   \institution{Yandex}
+%   \city{Saint Petersburg}
+%   \country{Russia}}
+% \email{solar@yandex-team.ru}
+
+% \author{Vsevolod Stepanov}
+% \affiliation{%
+%   \institution{Yandex}
+%   \city{Saint Petersburg}
+%   \country{Russia}}
+% \email{tehnar5@yandex-team.ru}
+
+% \author{Artem Trofimov}
+% \affiliation{%
+%   \institution{Yandex}
+%   \city{Saint Petersburg}
+%   \country{Russia}}
+% \email{tomato@yandex-team.ru}
+
+\begin{abstract}
+Truth inference is one of the most important and challenging tasks that is faced in crowdsourcing management. A major application of this task is obtaining labels for training machine learning models.  However, most prior works on this topic use only labels provided by annotators to infer the truth rather than to exploit learning process as a signal source about the quality of labels and the reliability of annotators as well. In recent years, such techniques were proposed, but they do not use the advantages of classical approaches if labels are noisy or unreliable. In this work, we combine both learning-based and labels aggregation-based approaches to use the advantages of both techniques. We demonstrate that our algorithm can outperform each of the combined techniques.
+\end{abstract}
+
+% \keywords{Data streams, exactly-once, drifting state, optimistic OOP}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\section {Introduction}
+\input {raykar-ds-intro.tex}
+
+\section {Related work}
+\input {raykar-ds-related.tex}
+
+\section {Conclusion}
+\input {raykar-ds-conclusion.tex}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{../../bibliography/crowdsourcing.bib}
+
+\end {document}
+
+\endinput

@@ -1,0 +1,13 @@
+\label{raykar-ds-conclusion}
+
+In this work, we proposed a method to infer truth labels from crowdsourced data. The key idea behind our method is to exploit information from both a learning process on tasks features with the answers from annotators and classical labels aggregation techniques. Our algorithm provides the following features:
+
+\begin{itemize}
+    \item If labels provided by annotators are reliable, the method extensively uses additional information about labels and annotators quality from a learning process on annotator labels and some task-specific features as it is proposed in~\cite{raykar2010learning}.
+    \item If labels are noisy, i.e. annotators are inconsistent with each other, the method mostly relies on a classical Dawid-Skene algorithm~\cite{dawid1979maximum} for labels and annotators estimation rather than on information from a machine learning model. This behavior allows us to avoid bias caused by the model trained on inconsistent data.
+\end{itemize}
+
+The reliability of annotators labels is measured on-the-fly, so it is automatically decided which technique should influence the result more. Such combination of existing and well-known algorithms keeps the advantages of the learning-based method while prevents from a huge bias in case of noisy data.
+
+Experiments on synthetic and real datasets indicate that the proposed method can significantly outperform the majority-vote baseline. Besides, it is shown that our technique provides more accurate results than each of the combine methods in some cases, while performs no worse than the best of them within all experiments. 
+
